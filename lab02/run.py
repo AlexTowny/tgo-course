@@ -151,8 +151,7 @@ def save_bpe_report(bpe, text, output_path=None, examples=None):
 
     # --- примеры токенизации ---
     if examples is None:
-        wf = Counter(WORD_RE.findall(text))
-        examples = [w for w, _ in wf.most_common(10)]
+        examples = ("наполеон", "сказала", "неудовольствие")
 
     examples_tokens = {w: bpe.apply_bpe(w) for w in examples}
 
