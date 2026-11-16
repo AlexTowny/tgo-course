@@ -127,7 +127,7 @@ def save_bpe_report(bpe, text, output_path=None, examples=None):
     """
     if output_path is None:
         ARTIFACTS.mkdir(exist_ok=True)
-        output_path = ARTIFACTS / "bpe_report.json"
+        output_path = ARTIFACTS / "bpe.json"
     else:
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -196,6 +196,8 @@ def main() -> None:
         bpe, 
         war_and_peace
     )
+
+    return 0
     
 
 
